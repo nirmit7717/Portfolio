@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Dev & AI/ML Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Particle Canvas Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Grid Background Overlay -->
+    <div class="grid-bg"></div>
+
+    <!-- CRT Overlay -->
+    <div class="crt-overlay"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">&lt;Nirmit/&gt;</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge coin-glow">🎮 PLAYER ONE READY</div>
+            <h1 class="glitch-text" data-text="NIRMIT">NIRMIT</h1>
+            <p class="hero-tagline">Game Dev • AI/ML Engineer • Creative Coder</p>
+            <p class="hero-description">
+                I'm a passionate creator who lives at the intersection of
+                <span class="text-primary">technology and imagination</span>.
+                I build immersive experiences and intelligent systems that push the boundaries of what's possible.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary neon-border">
+                    <span>🕹️</span> View Projects
+                </a>
+                <a href="#contact" class="btn btn-primary neon-border-red btn-red-gradient">
+                    <span>📬</span> Get In Touch
+                </a>
+            </div>
+        </div>
+        <div class="hero-3d-container" id="hero-3d"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">// 01</span>
+                <h2 class="neon-text">ABOUT ME</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="about-lead">
+                        I am <span class="text-primary">Nirmit Srivastava</span> a 3rd year B.Tech Student at <span class="text-secondary">VIT</span>. I craft high-fidelity game worlds with complex mechanics,
+                        while also training <span class="text-accent">neural networks</span> that learn and adapt — bringing a unique
+                        blend of creativity and technical depth to every project.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-value text-primary">2+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value text-secondary">5+</span>
+                            <span class="stat-label">Projects Built</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value text-accent">∞</span>
+                            <span class="stat-label">Curiosity</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-terminal">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">about.sh</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p><span class="prompt">$</span> cat about.txt</p>
+                        <p class="output">🎮 Game Developer specializing in Unreal Engine & C++</p>
+                        <p class="output">🤖 AI/ML Engineer with focus on Reinforcement Learning</p>
+                        <p class="output">🧠 Building adaptive AI systems for games</p>
+                        <p class="output">🛠️ Full-stack creator: from pixels to neural nets</p>
+                        <p><span class="prompt">$</span> <span class="cursor">_</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">// 02</span>
+                <h2 class="neon-text">MY PROJECTS</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <!-- Game Dev Projects -->
+            <div class="project-category">
+                <h3 class="category-title"><span>🎮</span> Game Dev</h3>
+                <div class="projects-grid">
+                    <div class="project-card group">
+                        <div class="card-glow"></div>
+                        <div class="card-header">
+                            <span class="card-icon">🌱</span>
+                            <span class="card-tag">Game for Good</span>
+                        </div>
+                        <h4 class="card-title">THE GREEN LIGHT</h4>
+                        <p class="card-description">A gamified 3D platform to teach sustainable farming practices to rural farmers through interactive gameplay, simulations, and engaging mechanics designed to maximize learning retention.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Unreal Engine</span>
+                            <span class="tech-tag">Blueprints</span>
+                            <span class="tech-tag">3D</span>
+                            <span class="tech-tag">Educational</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card group">
+                        <div class="card-glow"></div>
+                        <div class="card-header">
+                            <span class="card-icon">👾</span>
+                            <span class="card-tag">AI Game</span>
+                        </div>
+                        <h4 class="card-title">THE MONSTER GAME</h4>
+                        <p class="card-description">A 3D chase-based game featuring AI-driven enemy pursuit mechanics with behavior logic and dynamic pathfinding. Players must collect items and escape while the enemy adapts its tracking strategy in real-time.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Unreal Engine</span>
+                            <span class="tech-tag">AI</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Pathfinding</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card group">
+                        <div class="card-glow"></div>
+                        <div class="card-header">
+                            <span class="card-icon">⚔️</span>
+                            <span class="card-tag tag-wip">🟡 In Progress</span>
+                        </div>
+                        <h4 class="card-title">ELDER MIND</h4>
+                        <p class="card-description">An RL-based adaptive AI combat system that dynamically adjusts difficulty based on player performance. Models player behavior to influence agent decisions, using a hybrid 3-layer architecture with HRL strategy layer for real-time gameplay balance.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Unreal Engine</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Gymnasium</span>
+                            <span class="tech-tag">PPO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI/ML Projects -->
+            <div class="project-category">
+                <h3 class="category-title"><span>🤖</span> AI / ML</h3>
+                <div class="projects-grid">
+                    <div class="project-card group">
+                        <div class="card-glow"></div>
+                        <div class="card-header">
+                            <span class="card-icon">🐉</span>
+                            <span class="card-tag">AI / ML</span>
+                        </div>
+                        <h4 class="card-title">LLM GAME MASTER</h4>
+                        <p class="card-description">An AI-powered dungeon master that generates dynamic, branching narratives and adapts storylines to player choices in real-time, creating unique gameplay experiences with every session.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">LLM</span>
+                            <span class="tech-tag">NLP</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card group">
+                        <div class="card-glow"></div>
+                        <div class="card-header">
+                            <span class="card-icon">🖐️</span>
+                            <span class="card-tag">Computer Vision</span>
+                        </div>
+                        <h4 class="card-title">HAND INSTRUMENT</h4>
+                        <p class="card-description">A virtual musical instrument powered by MediaPipe 21-point hand tracking. Play 8 notes across 4 instruments by bending fingers, with swipe gestures to switch sounds — running at 30 FPS with pre-generated audio caching.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">MediaPipe</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Pygame</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card group">
+                        <div class="card-glow"></div>
+                        <div class="card-header">
+                            <span class="card-icon">✍️</span>
+                            <span class="card-tag tag-wip">🟡 In Progress</span>
+                        </div>
+                        <h4 class="card-title">HANDWRITING GENERATOR</h4>
+                        <p class="card-description">A deep learning model that generates realistic handwriting from text input, trained to mimic natural writing styles, stroke variations, and letter spacing for authentic-looking output.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">GAN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">// 03</span>
+                <h2 class="neon-text">TECHNICAL SKILLS</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🎯</div>
+                    <h4>Unreal Engine / C++</h4>
+                    <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🐍</div>
+                    <h4>Python / PyTorch</h4>
+                    <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🧠</div>
+                    <h4>Reinforcement Learning</h4>
+                    <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">👁️</div>
+                    <h4>Computer Vision</h4>
+                    <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h4>Web Development</h4>
+                    <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎮</div>
+                    <h4>Game Design</h4>
+                    <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                </div>
+            </div>
+            <div class="skills-tags-section">
+                <div class="skill-tag-group">
+                    <span class="skill-tag-label">Languages</span>
+                    <div class="skill-tags">
+                        <span class="skill-chip">Python</span>
+                        <span class="skill-chip">C++</span>
+                        <span class="skill-chip">Java</span>
+                        <span class="skill-chip">C</span>
+                        <span class="skill-chip">JavaScript</span>
+                        <span class="skill-chip">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-tag-group">
+                    <span class="skill-tag-label">AI / ML</span>
+                    <div class="skill-tags">
+                        <span class="skill-chip">PyTorch</span>
+                        <span class="skill-chip">TensorFlow</span>
+                        <span class="skill-chip">Scikit-Learn</span>
+                        <span class="skill-chip">OpenCV</span>
+                        <span class="skill-chip">Gymnasium</span>
+                        <span class="skill-chip">MediaPipe</span>
+                    </div>
+                </div>
+                <div class="skill-tag-group">
+                    <span class="skill-tag-label">Game Dev</span>
+                    <div class="skill-tags">
+                        <span class="skill-chip">Unreal Engine</span>
+                        <span class="skill-chip">Pygame</span>
+                        <span class="skill-chip">Roblox Studio</span>
+                    </div>
+                </div>
+                <div class="skill-tag-group">
+                    <span class="skill-tag-label">Developer Tools</span>
+                    <div class="skill-tags">
+                        <span class="skill-chip">Git</span>
+                        <span class="skill-chip">GitHub</span>
+                        <span class="skill-chip">AWS</span>
+                        <span class="skill-chip">Vercel</span>
+                        <span class="skill-chip">Linux</span>
+                        <span class="skill-chip">Node.js</span>
+                        <span class="skill-chip">React.js</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">// 04</span>
+                <h2 class="neon-text">GET IN TOUCH</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p class="contact-tagline">Got a project idea? Want to collaborate on a game or AI experiment? <span class="text-primary coin-glow">Insert coin</span> to start.</p>
+                    <div class="contact-links">
+                        <a href="mailto:nirmit77srivastava@gmail.com" class="contact-link" target="_blank">
+                            <span class="link-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg>
+                            </span>
+                            <span>Email</span>
+                        </a>
+                        <a href="https://github.com/nirmit7717" class="contact-link" target="_blank">
+                            <span class="link-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </span>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/nirmit-srivastava-1a50201a2/" class="contact-link" target="_blank">
+                            <span class="link-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            </span>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form" action="https://formsubmit.co/nirmit77srivastava@gmail.com" method="POST">
+                    <!-- Formsubmit config -->
+                    <input type="hidden" name="_subject" value="Portfolio Contact: New Message">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="">
+                    <!-- Honeypot anti-spam -->
+                    <input type="text" name="_honey" style="display:none">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary neon-border submit-btn">
+                        <span>🪙</span> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 Nirmit. All rights reserved.</p>
+            <p class="footer-tagline">Built with 🎮 and ☕</p>
+        </div>
+    </footer>
+
+    <script src="creatures.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
